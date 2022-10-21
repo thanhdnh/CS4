@@ -1,0 +1,15 @@
+/Users/hoangthanh/Documents/CSS4/bin/Debug/net6.0/CSS4
+/Users/hoangthanh/Documents/CSS4/bin/Debug/net6.0/CSS4.deps.json
+/Users/hoangthanh/Documents/CSS4/bin/Debug/net6.0/CSS4.runtimeconfig.json
+/Users/hoangthanh/Documents/CSS4/bin/Debug/net6.0/CSS4.dll
+/Users/hoangthanh/Documents/CSS4/bin/Debug/net6.0/CSS4.pdb
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.csproj.AssemblyReference.cache
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.AssemblyInfoInputs.cache
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.AssemblyInfo.cs
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.csproj.CoreCompileInputs.cache
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.dll
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/refint/CSS4.dll
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.pdb
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/CSS4.genruntimeconfig.cache
+/Users/hoangthanh/Documents/CSS4/obj/Debug/net6.0/ref/CSS4.dll
