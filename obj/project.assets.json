@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hoangthanh/Documents/CSS4/CSS4.csproj",
-      "projectName": "CSS4",
-      "projectPath": "/Users/hoangthanh/Documents/CSS4/CSS4.csproj",
+      "projectUniqueName": "/Users/hoangthanh/Documents/CS4/CS4.csproj",
+      "projectName": "CS4",
+      "projectPath": "/Users/hoangthanh/Documents/CS4/CS4.csproj",
       "packagesPath": "/Users/hoangthanh/.nuget/packages/",
-      "outputPath": "/Users/hoangthanh/Documents/CSS4/obj/",
+      "outputPath": "/Users/hoangthanh/Documents/CS4/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hoangthanh/.nuget/NuGet/NuGet.Config"

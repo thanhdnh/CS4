@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "CSS4/1.0.0": {
+      "CS4/1.0.0": {
         "runtime": {
-          "CSS4.dll": {}
+          "CS4.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "CSS4/1.0.0": {
+    "CS4/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

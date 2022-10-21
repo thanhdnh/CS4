@@ -1,0 +1,15 @@
+/Users/hoangthanh/Documents/CS4/bin/Debug/net6.0/CS4
+/Users/hoangthanh/Documents/CS4/bin/Debug/net6.0/CS4.deps.json
+/Users/hoangthanh/Documents/CS4/bin/Debug/net6.0/CS4.runtimeconfig.json
+/Users/hoangthanh/Documents/CS4/bin/Debug/net6.0/CS4.dll
+/Users/hoangthanh/Documents/CS4/bin/Debug/net6.0/CS4.pdb
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.csproj.AssemblyReference.cache
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.AssemblyInfoInputs.cache
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.AssemblyInfo.cs
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.csproj.CoreCompileInputs.cache
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.dll
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/refint/CS4.dll
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.pdb
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/CS4.genruntimeconfig.cache
+/Users/hoangthanh/Documents/CS4/obj/Debug/net6.0/ref/CS4.dll
