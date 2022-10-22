@@ -113,8 +113,19 @@ class Program{
             sum += v;
         return sum;
     }
+    class Subject{
+        public string id;
+        public string name;
+        public float midp;
+        public float exp;
+    }
     static void Main(string[] args){
-        Console.Clear();    int len =1000000;
+        Console.Clear();   
+        Subject sb = new Subject();
+        sb.id = "MH01"; sb.name = "CSLT"; sb.midp = 7.6f; sb.exp = 8.4f; 
+        List<Subject> list = new List<Subject>();
+        list.Add(sb);
+        /*int len =1000000;
         Array arr = Array.CreateInstance(typeof(int), len);
         List<int> list = new List<int>();  ArrayList arl = new ArrayList();
         GenerateCollections(arr, list, arl, len);
@@ -133,7 +144,8 @@ class Program{
         timer.startTime();
         SumCollection<ArrayList>(arl);
         timer.StopTime();
-        System.Console.WriteLine("ArrayList takes {0} ms", timer.Result().Milliseconds);
+        System.Console.WriteLine("ArrayList takes {0} ms", timer.Result().Milliseconds);*/
+
         /*ArrayList arl = new ArrayList();
         GenerateArrayList1D(arl, 10);
         System.Console.WriteLine("Sum ArrayList1D: {0}", SumArrayList(arl));*/
