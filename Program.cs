@@ -1,4 +1,6 @@
-﻿class Program{
+﻿using System.Collections;
+using System.Collections.Generic;
+class Program{
     static void GenerateArray1D(out Array arr, int len, int lb){
         arr = Array.CreateInstance(typeof(int), new int[1]{len}, new int[1]{lb});
         Random r = new Random();
@@ -85,11 +87,47 @@
             System.Console.WriteLine();
         }
     }
+    static void GenerateArrayList1D(ArrayList arl, int c){
+        Random r = new Random();
+        for(int i=0; i<c; i++)
+            arl.Add(r.Next(1, 99));
+    }
+    static int SumArrayList(ArrayList arl){
+        int sum = 0;
+        for(int i=0; i<arl.Count; i++)
+            sum += (int)arl[i];
+        /*foreach(int v in arl)
+            sum += v;*/
+        return sum;
+    }
+    static void GenerateCollections(Array arr, List<int> list, ArrayList arl, int len){
+        Random r = new Random();
+        for(int i=0; i<len; i++){
+            int v = r.Next(1, 99);
+            arr.SetValue(v, i);  list.Add(v);  arl.Add(v);
+        }
+    }
+    static int SumCollection<T>(T col){
+        int sum = 0;
+        foreach(int v in (dynamic)col)
+            sum += v;
+        return sum;
+    }
     static void Main(string[] args){
-        Console.Clear();
-        List<List<int>> list = new List<List<int>>();
+        Console.Clear();    int len =1000000;
+        Array arr = Array.CreateInstance(typeof(int), len);
+        List<int> list = new List<int>();  ArrayList arl = new ArrayList();
+        GenerateCollections(arr, list, arl, len);
+        SumCollection<Array>(arr);
+        SumCollection<List<int>>(list);
+        SumCollection<ArrayList>(arl);
+        /*ArrayList arl = new ArrayList();
+        GenerateArrayList1D(arl, 10);
+        System.Console.WriteLine("Sum ArrayList1D: {0}", SumArrayList(arl));*/
+
+        /*List<List<int>> list = new List<List<int>>();
         GenerateList2D<int>(list, 4, 3); 
-        PrintList2D<int>(list);
+        PrintList2D<int>(list);*/
 
         /*List<float> list = new List<float>();
         GenerateList1D<float>(list, 5);
