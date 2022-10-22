@@ -118,9 +118,22 @@ class Program{
         Array arr = Array.CreateInstance(typeof(int), len);
         List<int> list = new List<int>();  ArrayList arl = new ArrayList();
         GenerateCollections(arr, list, arl, len);
+        Timing timer = new Timing();
+
+        timer.startTime();
         SumCollection<Array>(arr);
+        timer.StopTime();
+        System.Console.WriteLine("Array takes {0} ms", timer.Result().Milliseconds);
+        
+        timer.startTime();
         SumCollection<List<int>>(list);
+        timer.StopTime();
+        System.Console.WriteLine("List takes {0} ms", timer.Result().Milliseconds);
+
+        timer.startTime();
         SumCollection<ArrayList>(arl);
+        timer.StopTime();
+        System.Console.WriteLine("ArrayList takes {0} ms", timer.Result().Milliseconds);
         /*ArrayList arl = new ArrayList();
         GenerateArrayList1D(arl, 10);
         System.Console.WriteLine("Sum ArrayList1D: {0}", SumArrayList(arl));*/
