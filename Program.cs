@@ -62,20 +62,39 @@
     }
     static T SumList<T>(List<T> list){
         T sum = list[0];
-        for(int i=1; i<list.Count; i++)
-            sum += (dynamic)list[i];
-        /*foreach(T v in list)
+        /*for(int i=1; i<list.Count; i++)
+            sum += (dynamic)list[i];*/
+        foreach(T v in list)
             sum += (dynamic)v;
-        sum -= (dynamic)list[0];*/
+        sum -= (dynamic)list[0];
         return sum;
+    }
+    static void GenerateList2D<T>(List<List<T>> list, int c1, int c2){
+        Random r = new Random();
+        for(int i=0; i<c1; i++){
+            List<T> tlist = new List<T>();
+            for(int j=0; j<c2; j++)
+                tlist.Add((dynamic)r.Next(1, 99));
+            list.Add(tlist);
+        }
+    }
+    static void PrintList2D<T>(List<List<T>> list){
+        for(int i=0; i<list.Count; i++){
+            for(int j=0; j<list[i].Count; j++)
+                System.Console.Write("{0,5}", list[i][j]);
+            System.Console.WriteLine();
+        }
     }
     static void Main(string[] args){
         Console.Clear();
+        List<List<int>> list = new List<List<int>>();
+        GenerateList2D<int>(list, 4, 3); 
+        PrintList2D<int>(list);
 
-        List<float> list = new List<float>();
+        /*List<float> list = new List<float>();
         GenerateList1D<float>(list, 5);
         PrintList1D<float>(list);
-        System.Console.WriteLine("\nSum List1D: {0}", SumList<float>(list));
+        System.Console.WriteLine("\nSum List1D: {0}", SumList<float>(list));*/
 
         /*Array arr;
         GenerateArray2D(out arr, 5, 5, 1, 1);
