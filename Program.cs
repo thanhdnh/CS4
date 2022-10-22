@@ -24,6 +24,7 @@
         Array arr;
         GenerateArray1D(out arr, 5, 1);
         PrintArray1D(arr);
+        System.Console.WriteLine("Tong Array: {0}", SumArray1D(arr));
 
         /*Array arr = Array.CreateInstance(typeof(int), new int[1]{5}, new int[1]{1});
         System.Console.WriteLine("Chi so duoi {0}", arr.GetLowerBound(0));
