@@ -117,7 +117,24 @@ class Program
   }
   static int FindQ(MyQueue mq, int x)
   {
-    return 0;
+    int loca = -1;
+    int index = 0;
+    MyQueue temp = new MyQueue();
+    int count = 0;
+    while (!mq.IsEmpty())
+    {
+      int t = (int)mq.Dequeue().data;
+      if (t == x && count == 0)
+      {
+        loca = index;
+        count++;
+      }
+      else index++;
+      temp.Enqueue(t);
+    }
+    while (!temp.IsEmpty())
+      mq.Enqueue(temp.Dequeue().data);
+    return loca;
   }
   static void Main(string[] args)
   {
@@ -132,6 +149,9 @@ class Program
     mq.Enqueue(1);
     mq.Enqueue(2);
     mq.Enqueue(3);
+    mq.Enqueue(2);
+    mq.Enqueue(5);
+    System.Console.WriteLine(FindQ(mq, 2));
     System.Console.WriteLine("Sum of Queue: {0}", SumQueue(mq));
     Console.ReadLine();
   }
