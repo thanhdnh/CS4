@@ -63,6 +63,26 @@ public class Program
         current = current.link;
       }
     }
+    public void AddFirst(object newelement){
+      Node newNode = new Node(newelement);
+      newNode.link = header.link;
+      header.link = newNode;
+    }
+    public void AddLast(object newelement){
+      Node current = new Node();
+      Node newnode = new Node(newelement);
+      current = header;
+      while(current.link!=null)
+        current=current.link;
+      current.link=newnode;
+    }
+    public void AddBefore(object newelement, object beforelement){
+      Node current = new Node();
+      current = FindPrev(beforelement);
+      Node newnode = new Node(newelement);
+      newnode.link = current.link;
+      current.link = newnode;
+    }
   }
 
   public class Node2
@@ -145,6 +165,9 @@ public class Program
     ll.Insert("11", "Header");
     ll.Insert("22", "11");
     ll.Insert("33", "22");
+    ll.AddBefore("66","33");
+    ll.AddFirst("44");
+    ll.AddLast("55");
     ll.Print();
     
     Console.ReadLine();
