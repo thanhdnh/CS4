@@ -83,6 +83,22 @@ public class Program
       newnode.link = current.link;
       current.link = newnode;
     }
+    public void DeleteFirst(){
+      Node current = header.link.link;
+      header.link.link = null;
+      header.link = current;
+    }
+    public int FindMax(){
+      Node current = header.link;
+      int max = Convert.ToInt32(current.element);
+      while (current.link != null)
+      {
+        current = current.link;
+        if (max < Convert.ToInt32(current.element))
+          max = Convert.ToInt32(current.element);
+      }
+      return max;
+    }
   }
 
   public class Node2
@@ -168,6 +184,8 @@ public class Program
     ll.AddBefore("66","33");
     ll.AddFirst("44");
     ll.AddLast("55");
+    ll.DeleteFirst();
+    Console.WriteLine($"Max là {ll.FindMax()}");
     ll.Print();
     
     Console.ReadLine();
