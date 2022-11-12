@@ -172,12 +172,32 @@ public class Program
         current = current.blink;
       }
     }
+    public int Count(){
+      int count = 0;
+      Node2 current = header;
+      while(current.flink!=null){
+        current=current.flink;
+        count++;
+      }
+      return count;
+    }
+    public int Sum()
+    {
+      int sum = 0;
+      Node2 current = header;
+      while(current.flink != null)
+      {
+        current = current.flink;
+        sum += Convert.ToInt32(current.element);
+      }
+      return sum;
+    }
   }
   static void Main()
   {
     Console.Clear();
     
-    LinkedList ll = new LinkedList();
+    /*LinkedList ll = new LinkedList();
     ll.Insert("11", "Header");
     ll.Insert("22", "11");
     ll.Insert("33", "22");
@@ -186,8 +206,40 @@ public class Program
     ll.AddLast("55");
     ll.DeleteFirst();
     Console.WriteLine($"Max là {ll.FindMax()}");
-    ll.Print();
-    
+    ll.Print();*/
+
+    /*DoubleLinkedList dl = new DoubleLinkedList();
+    dl.Insert("11", "Header");
+    dl.Insert("22", "11");
+    dl.Insert("55", "22");
+    Console.WriteLine("Có "+dl.Count());
+    Console.WriteLine("Tổng: " + dl.Sum());*/
+
+    LinkedListNode<int> node0 = new LinkedListNode<int>(11);
+    LinkedListNode<int> node1 = new LinkedListNode<int>(22);
+    LinkedListNode<int> node2 = new LinkedListNode<int>(33);
+    LinkedListNode<int> node3 = new LinkedListNode<int>(44);
+    LinkedListNode<int> node4 = new LinkedListNode<int>(55);
+    LinkedList<int> dll = new LinkedList<int>();
+    dll.AddFirst(node0);
+    dll.AddLast(node1);
+    dll.AddBefore(node1, node2);
+    dll.AddAfter(node2, node3);
+    dll.AddFirst(node4);
+    foreach(int value in dll)
+      System.Console.Write(value + " ");
+    LinkedList<int> result = Inverse(dll);
+    System.Console.WriteLine();
+    foreach(int value in result)
+      System.Console.Write(value + " ");
+
     Console.ReadLine();
+  }
+  static LinkedList<int> Inverse(LinkedList<int> dll){
+    LinkedList<int> result = new LinkedList<int>();
+    foreach(int v in dll){
+      result.AddFirst(new LinkedListNode<int>(v));
+    }
+    return result;
   }
 }
