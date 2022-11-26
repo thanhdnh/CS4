@@ -142,26 +142,110 @@
       }
       return parent;
     }
+    public int Count()
+    {
+      return Count(Root);
+    }
 
+    public int Count(Node parent)
+    {
+      if (parent == null)
+        return 0;
+      else
+        return Count(parent.LeftNode) + Count(parent.RightNode) + 1;
+    }
+    public int Count2()
+    {
+      int count = 0;
+      Count2(Root, ref count);
+      return count;
+    }
+
+    public void Count2(Node parent, ref int count)
+    {
+      if (parent != null)
+      {
+        Count2(parent.LeftNode, ref count);
+        count++;
+        Count2(parent.RightNode, ref count);
+      }
+    }
+
+    public int CountLeaf()
+    {
+      int count = 0;
+      CountLeaf(Root, ref count);
+      return count;
+    }
+
+    public void CountLeaf(Node parent, ref int count)
+    {
+      if (parent != null)
+      {
+        CountLeaf(parent.LeftNode, ref count);
+        if (parent.RightNode == null && parent.LeftNode == null) count++;
+        CountLeaf(parent.RightNode, ref count);
+      }
+    }
+    public int Sum()
+    {
+      int sum = 0;
+      Sum(this.Root, ref sum);
+      return sum;
+    }
+    public void Sum(Node parent, ref int sum)
+    {
+      if (parent != null)
+      {
+        sum += parent.Data;
+        Sum(parent.LeftNode, ref sum);
+        Sum(parent.RightNode, ref sum);
+      }
+    }
+    public int SumLeaf()
+    {
+      int sum = 0;
+      SumLeaf(this.Root, ref sum);
+      return sum;
+    }
+    public void SumLeaf(Node parent, ref int sum)
+    {
+      if (parent != null)
+      {
+        if (parent.LeftNode == null && parent.RightNode == null)
+          sum += parent.Data;
+        SumLeaf(parent.LeftNode, ref sum);
+        SumLeaf(parent.RightNode, ref sum);
+      }
+    }
   }
   static void Main()
   {
     Console.Clear();
 
     BinarySearchTree binaryTree = new BinarySearchTree();
-    binaryTree.Insert(23); binaryTree.Insert(16); binaryTree.Insert(45); 
+    binaryTree.Insert(23); binaryTree.Insert(16); binaryTree.Insert(45);
     binaryTree.Insert(3);
     binaryTree.Insert(22); binaryTree.Insert(37); binaryTree.Insert(99);
-    /*Console.WriteLine(">> Max:" + binaryTree.FindMax());  //hoặc dùng binaryTree.FindMax2()   
+    Console.WriteLine(">> Max:" + binaryTree.FindMax());  //hoặc dùng binaryTree.FindMax2()   
     Console.WriteLine(">> Min:" + binaryTree.FindMin());  //hoặc dùng binaryTree.FindMin2()
     Node node = binaryTree.Find(5);
-    int depth = binaryTree.GetTreeDepth();*/
+    int depth = binaryTree.GetTreeDepth();
     Console.WriteLine(">> PreOrder Traversal:"); binaryTree.TraversePreOrder(binaryTree.Root);
     Console.WriteLine("\n>> InOrder Traversal:"); binaryTree.TraverseInOrder(binaryTree.Root);
     Console.WriteLine("\n>> PostOrder Traversal:"); binaryTree.TraversePostOrder(binaryTree.Root);
-    /*binaryTree.Remove(7); binaryTree.Remove(8);
+    /*binaryTree.Remove(37); binaryTree.Remove(16);
     Console.WriteLine("\n>> PreOrder After Removing Operation:");
     binaryTree.TraversePreOrder(binaryTree.Root);*/
+
+    Console.WriteLine("\nNoN 1: " + binaryTree.Count());
+    Console.WriteLine("NoN 2: " + binaryTree.Count2());
+
+    binaryTree.Insert(2); binaryTree.Insert(4);
+    Console.WriteLine("Total leaf: " + binaryTree.CountLeaf());
+
+    System.Console.WriteLine($"Sum: {binaryTree.Sum()}");
+    System.Console.WriteLine($"SumLeaf: {binaryTree.SumLeaf()}");
 
     Console.ReadLine();
   }
