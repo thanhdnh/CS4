@@ -151,20 +151,20 @@ public class Program{
     g2.AddEdgeDiGraph("C", "A");
     g2.ShowAdjMatrix();*/
 
-    //Graph graph = new Graph(13);
-    /*graph.AddVertex("A"); graph.AddVertex("B");//0 1
+    Graph graph = new Graph(13);
+    graph.AddVertex("A"); graph.AddVertex("B");//0 1
     graph.AddVertex("C"); graph.AddVertex("D");//2 3
     graph.AddVertex("E"); graph.AddVertex("F");//4 5
     graph.AddVertex("G"); graph.AddVertex("H");//6 7
     graph.AddVertex("I"); graph.AddVertex("J");//8 9
     graph.AddVertex("K"); graph.AddVertex("L");//10 11
-    graph.AddVertex("M");//12*/
-    /*graph.AddEdge("A", "B"); graph.AddEdge("A", "E");
+    graph.AddVertex("M");//12
+    graph.AddEdge("A", "B"); graph.AddEdge("A", "E");
     graph.AddEdge("A", "H"); graph.AddEdge("A", "K");
     graph.AddEdge("B", "C"); graph.AddEdge("C", "D");
     graph.AddEdge("E", "F"); graph.AddEdge("F", "G");
     graph.AddEdge("H", "I"); graph.AddEdge("I", "J");
-    graph.AddEdge("K", "L"); graph.AddEdge("L", "M");*/
+    graph.AddEdge("K", "L"); graph.AddEdge("L", "M");
     //graph.AddEdge(0, 1); //graph.AddEdge(1, 0);
     //graph.AddEdge(0, 4); //graph.AddEdge(4, 0);
     //graph.AddEdge(0, 7); //graph.AddEdge(7, 0);
@@ -177,10 +177,10 @@ public class Program{
     //graph.AddEdge(8, 9); //graph.AddEdge(9, 8);
     //graph.AddEdge(10, 11); //graph.AddEdge(11, 10);
     //graph.AddEdge(11, 12); //graph.AddEdge(12, 11);
-    /*Console.Write("DFS: ");
+    Console.Write("DFS: ");
     graph.DepthFirstSearch();
     Console.Write("\nBFS: ");
-    graph.BreadthFirstSearch();*/
+    graph.BreadthFirstSearch();
     Console.ReadLine();
   }
 }
